@@ -1,15 +1,16 @@
 name: Publish
 
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:
-    inputs:
-      force_publish:
-        description: "Run pnpm release even with no pending changesets (finish a partial publish)"
-        type: boolean
-        default: false
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches: [main]
+#   workflow_dispatch:
+#     inputs:
+#       force_publish:
+#         description: "Run pnpm release even with no pending changesets (finish a partial publish)"
+#         type: boolean
+#         default: false
+# 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false

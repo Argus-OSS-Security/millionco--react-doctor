@@ -5,13 +5,14 @@ name: Action Version Bump
 # (action.yml + the scripts it shells out to), this either recommends a version
 # bump on the PR or — opt-in — performs it on merge to main.
 
-on:
-  pull_request:
-    branches: [main]
-    types: [opened, synchronize, reopened, edited]
-  push:
-    branches: [main]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     branches: [main]
+#     types: [opened, synchronize, reopened, edited]
+#   push:
+#     branches: [main]
+# 
 permissions:
   contents: read
 

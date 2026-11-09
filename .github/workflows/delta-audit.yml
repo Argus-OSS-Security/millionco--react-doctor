@@ -3,11 +3,12 @@ name: Delta Audit
 # Corpus delta audit: scans a pinned corpus of OSS React repos with the
 # locally built CLI and compares per-rule finding counts against the
 # checked-in baseline. Nightly + manual only — too slow for PR CI.
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: "23 6 * * *"
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#   schedule:
+#     - cron: "23 6 * * *"
+# 
 permissions:
   contents: read
 
